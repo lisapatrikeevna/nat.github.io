@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>пример</title>
+		
+		<script 
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>	
+		<link rel="stylesheet"  href="css/&&&.css">
+	</head>
+	<body>
+		<header>
+				<div class="container">
+					<h1>бьюти студия</h1>
+					<h2>все в наших руках</h2>
+				</div>	
+		</header>
+		<div id="fixed">	
+			
+			<ul id="ay">
+				<li><a href="&1&.html">наш прайс</a></li>
+				<li><a href="&y&.html"> услуги</a>
+				    <ul class="dropdovn">
+					    <li><a href="">женские стрижки</a></li>
+					    <li><a href="">мужские стрижки</a></li>
+					    <li><a href="">окрашивание волос</a></li>
+					    <li><a href="">мелирование</a></li>
+					    <li><a href="">колорирование</a></li>
+						<li><a href="">амбре(самбре)</a></li>
+						<li><a href="">кератирование</a></li>
+						<li><a href="">ботокс для волос</a></li>
+						<li><a href="">прически</a></li>
+						<li><a href="">укладки</a></li>
+					</ul>
+				</li>
+				<li><a href="&k&.html">контакты</a></li>
+			</ul>
+			<div id="sidebar">
+			<p> навигашка по сайту</p>
+				<ul>
+					<li><a href="#q">акции</a></li>
+					<li><a href="&y&.html">услуги</a></li>
+					<li><a href="&new&.html">новинки</a></li>
+					<li><a href="&k&.html">контакты</a></li>
+					<li><a href="&&.html">маникюр</a></li>
+					<li><a href="https://www.facebook.com/messages/t/dsevenj">фейсбук</a></li>				
+					<li><a href="https://vk.com/id235369004">контакт</a></li>				
+					<li><a href="#go">тест</a></li>
+				</ul>
+				
+				
+			</div>
+		</div>	
+		
+					<div id="content">
+						<div id="art">
+							<p id="oy">ПРОЦЕДУРЫ</p>
+							<div id="new">
+			<div align="center" style="height:400px;">
+			<img src="img/33.jpg" alt="" id="slide_show"><br>
+			<span id="slide_text">наши работы</span>
+			</div>
+
+			<span style="color:blue; cursor:pointer;" onclick="clearInterval(play)">Стоп</span>
+			&nbsp;&nbsp;&nbsp;
+			<span style="color:blue; cursor:pointer;margin-left:470px"  onclick="play=setInterval('chgImg(0)',
+			5000);">Продолжить</span>
+
+				<script type="text/javascript">
+				var imgs = ["img/33-1.jpg","img/33-2.jpg","img/33-3.jpg","img/33-4.jpg","img/33-5.jpg"];
+				var text = ['мужские стрижки','<a href="index.php">женские стрижки</a>',
+							'<font color="red">окрашивание волос</font>','класические стрижки','подбор образа'];
+				var n=0;
+				time=800;
+				play=setInterval("chgImg(0)", 5000);
+
+				function chgImg(number) {
+				if (number!=0) n=number-2;
+				 $('#slide_show').fadeOut(time, function() {    //для картинок
+				  $(this).attr('src', imgs[n]).fadeIn(time);
+				 });
+
+				 $('#slide_text').fadeOut(time, function() {    //для текста
+				  $(this).html(text[n]).fadeIn(time);
+				 });
+
+				n++;
+				if (n>=imgs.length) n=0;
+				}
+				</script>
+		</div>
+						    <p>Полировка волос Харьков</p>
+							<div class="combinator" > 
+							    <p>
+								Полировка волос-удаление на 90% посеченных кончиков волос по всей длинне!!!!!
+								Наверное, каждой девушке знакома тема секущихся кончиков волос! Они появляются вследствие неправильного ухода: злоупотребления стайлерами и феном, частое окрашивание, расчесывание мокрых волос и не только. В результате такого небрежного обращения с волосами они "отплачивают" нам тусклыми, ломкими, посеченными кончиками. 
+
+								Посеченные волоски не подлежат восстановлению! Всегда считалось, что единственный способ борьбы с этой неприятностью - 		обрезание волос. 
+
+								НО относительно недавно появилась новая процедура - это полировка волос с помощью специальной насадки HG Polishen. Ее суть заключается в ликвидации ломких, раздвоенных волосков без потери общей длины❗❗❗<br>
+								Полировка волос позволяет:<br>
+								-сохранить здоровый внешний вид волос <br>
+								-волосы перестают путаться<br>
+								-убрать от 90 до 100 % секущихся кончиков по всей длине<br>
+								-срезается только кончики от 3 до 10 мм не более<br>
+								АКЦИЯ!!! Самая лучшая цена в городе! Процедура полировки волос - 250-300 грн.!!!
+							    </p>
+							</div>
+							<a href='#contact' id="q"><img src="img/7-1.jpg"></a>
+							<p><a href="&new&.html"class="pseudo-class" id="news">Новинки</a><br> Мы предлагаем своим гостям
+							все самое новое и все самое лучшее из нового!<br>
+
+							Последние разработки и достижения в космецевтике, самые современные технологии в индустрии красоты помогут вам выглядеть всегда молодо, ухожено и здорово!   </p>
+							<p class="first-letter">Специальные предложения для именинников!</p>
+							<p class="pseudo-element"> Только в салоне "pin-ap" ваш День Рождения длится целый месяц!<br>
+
+							Вы можете воспользоваться скидками и акционными предложениями как в день своего рождения, так и в любой другой день текущего месяца.<br>
+
+							Теперь ваш праздник не ограничивается одной датой - посещение салона красоты "pin-ap" вы можете запланировать до Дня Рождения или оставить на "десерт"!
+							
+							<P class="first-line">ногтевой сервис и много других разнообразных услуг</p>
+							<p>если вам стало скучно</p>
+							<p>пройдите тест</p>
+							<p title="YA SOVEST!"> GDE ONA?</p><!-- появится подсказка при наведени -->
+						</div>
+					</div>
+		<section id="go">
+		<div class="bottom">
+			<p >придумай себе вопрос и выбери вариант ответа</p>
+			<p> <input title="ТЫ ХОРОШО ПОДУМАЛ?" type="checkbox" name="a1"><span>вариант a</span> <br>
+				<input title="ТЫ УВЕРЕН?" type="checkbox" name="a2"><span>вариант b</span> <br>
+				<input title="МОЖЕТ НЕ СТОИТ?" type="checkbox" name="a3"><span>вариант c</span> <br>
+				<input title="ТЫ НЕ ЗАБЫЛ ВОПРОС?" type="checkbox" name="a4"><span>вариант d</span> <br>
+				<input title="ЭТО ТОЧНО ТВОЙ ВОПРОС?" type="checkbox" name="a5"><span>вариант i</span> <br>
+				<input title="МОЖЕТ,НУ ЕГО...!" type="checkbox" name="a6"><span>вариант f</span> <br>
+				<input title="ЭХ! БЫЛА, НЕ БЫЛА)))" type="checkbox" name="a7"><span>вариант g</span> <br>
+			</p>
+			<p><input type="submit" value="отправить"></p>
+		</div>
+		</section>
+		<section id="ups">
+			<div class="ups">
+				<!--<p>женские стрижки</p> 
+				<input checked type="radio" name="respond" id="desktop">
+				<article id="slider">
+					<input checked type="radio" name="slider" id="switch1">
+					<input type="radio" name="slider" id="switch2">
+					<input type="radio" name="slider" id="switch3">
+					<div id="slides">
+							<div id="overflow">
+								<div id="image">
+									<article><img src="img/3.jpg"></article>
+									<article><img src="img/8.jpg"></article>
+									<article><img src="img/4.jpg"></article>
+								</div>
+							</div>
+						</div>
+						<div id="controls">
+							<label for="switch1"></label>
+							<label for="switch2"></label>
+							<label for="switch3"></label>
+						</div>
+						<div id="active">
+							<label for="switch1"></label>
+							<label for="switch2"></label>
+							<label for="switch3"></label>
+						</div>
+				</article>-->
+		</div>	
+			</div>
+		</section>
+		<!--<div id="footer">	
+			<P>авторские права...</p>
+		</div>
+		<address id="contact"> г.харьков<br> р-н Московский<br> ул. Спартака<br> тел. 099-47-147-70
+		</address>-->
+		
+		
+	</body>
+</html>
