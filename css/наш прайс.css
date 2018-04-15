@@ -1,0 +1,141 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family:GABRIOLA,sans-serif;
+	color:#000;
+}
+body {
+	line-height: 15px;
+	display:block;
+	background: #F5F5F5;
+}
+header{
+	margin:0;
+	overflow: hidden;
+}
+header{
+	background:rgba(0, 0, 0, 0.92) ;
+	height:400px;
+	width:100%;
+}
+#fixed ul li{
+	position:relative;
+	margin-top:320px;
+	margin-right:230px;
+	float:right;
+    display:block;
+}
+#fixed li a{
+	line-height:45px;
+	width:100%;
+	font-size:45px;
+	word-spacing:10px;
+	text-decoration:none;
+	color:red;
+}
+#fixed li a:hover{
+	color:#FF4500;
+}
+.ferst{
+	background:url(../img-main/55.jpg) no-repeat center top / cover ;
+	margin-left:332px;
+	height:300px;
+	width:700px;
+}
+.ferst h1{
+	color:red;
+	font-size:65px;
+	font-style:italic;
+	position:absolute;
+	margin-left:175px;
+	margin-top:25px;
+}
+ address{
+	position:absolute;
+	background:rgba(72,71,71,0.2);
+	width:150px;
+	height:80px;
+	margin: 180px 365px;
+}
+address{
+	text-align:center;
+	font-size:20px;	
+}
+
+.hrefPrise h2{
+	padding-left:460px;
+	color:#c50f0f;
+	font-size:75px;
+	margin-left:80px;
+	margin-top:40px;
+}
+.hrefPrise h3{
+	text-align:center;
+	font-size:50px;
+}
+table{
+	width:700px;
+	margin:10px auto 20px;
+	border-collapse:collapse;
+}
+table th{
+	background:#887d7d;
+	border:1px solid #92040a;
+	color:#b90e0e;
+	font-size:35px;
+	line-height:40px;
+}
+table td{
+	background:#d2cbcb;
+	border:1px solid #777777;
+	font-size:25px;
+}
+
+h4{
+	color:#b90e0e;
+	text-align:center;
+	font-size:50px;
+	position:relative;
+	float:right;
+	padding-right:570px;
+}
+#neill {
+	position:relative;
+	margin-top:100px;
+}
+
+#cosmetic table{
+	position:relative;
+	margin-top:80px;
+}
+.footer{
+	display:block;
+	background:rgba(0, 0, 0, 0.92);
+	height:250px;
+}
+#socialNetwork{ 
+background:url(../img-main/55.jpg) no-repeat center top;
+margin-left:315px; 
+margin-bottom:20px;
+width:720px;
+height:250px;
+}
+.w{ 
+position:absolute; 
+} 
+
+#socialNetwor{ 
+float:right; 
+margin-right:415px; 
+/**margin-top:110px;**/
+} 
+h6{ 
+font-size:70px;
+text-align:center;
+padding-top:20px;
+color:red;
+text-decoration:underline;
+}
+#socialNetwor:last-child{ 
+margin-left:100px; 
+}

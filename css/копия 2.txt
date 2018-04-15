@@ -1,0 +1,42 @@
+.menu:after{
+	content:'';
+	display: table;
+	width: 100%;
+	clear: both;
+}
+h3{
+	font-weight:bolder;
+	font-size:90px;
+	font-style:italic;
+	text-align:center;
+	text-shadow:3px 5px 12px #B8860B;
+	margin:15px;
+}
+/**/
+#nav{
+	float: left;
+	width: 280px;
+	display: block;
+	text-align:left;
+	
+}
+#nav h4{
+	font-size:38px;
+	margin-bottom:3px;
+}
+#nav p {
+	font-size: 20px;
+	
+}
+#nav:last-child {
+	float:right;
+	
+}
+#nav:nth-child(2) {
+	margin-left:50px;
+	
+}
+/**/
+.works{
+	background-attachment: url(../img-main/1-8.png)
+}
