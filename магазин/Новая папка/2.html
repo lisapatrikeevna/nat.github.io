@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<title>выборка элементов с помощью jQuery</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet"  href="css/2.css">
+		<script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script>
+		<script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ecommerce.js"></script>
+		
+		<script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script>
+		<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+		
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-54671594-2"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-54671594-2');
+		</script>
+		<script>
+			document.addEventListener("EasyNetShopLoaded", function(event) {
+			$(".easynetshop-buy").click(function () {
+			var target = $(this);
+			var pos = target.offset();
+			var cart_pos = $('#enscart_wrapper').offset();
+			var clone = target.clone()
+			  .css({ position: 'absolute', 'z-index': '2100', top: pos.top, left: pos.left })
+			  .appendTo("body")
+			  .animate({top: cart_pos.top, left: cart_pos.left, opacity: 0}, 900, function() { clone.remove(); });
+				});
+			}, false);
+			document.addEventListener("EasyNetShopModalOpened", function(event) {
+			if (($(".easynetshop-modal-addtocart").css('display') != 'none'))  hideEasynetshopModals();
+			}, false);   
+			</script>
+			<script type="text/javascript">
+        	document.addEventListener("EasyNetShopLoaded", function(event) {
+                    $('.easynetshop-buy').click(function()
+                	{yaCounter36578185.reachGoal('add');
+			gtag('event', 'клик', {'event_category': 'EasyNetShop', 'event_action': 'add'});
+			});
+                    $('.easynetshop-doorder').click(function()
+                	{yaCounter36578185.reachGoal('order');
+			yaCounter36578185.userParams({pokupal:true});
+			var ClientID = yaCounter36578185.getClientID();
+			});
+		    var fhtml = '';
+			fhtml += '<div style="color:#999999;margin-top:20px;text-align:center;">После оформления заказа Вы можете оплатить его онлайн <br> <img src="https://demo.easynetshop.ru/img/demopay.jpg">  </div>';
+
+		    $('.easynetshop-modal-addtocart .easynetshop-center').append(fhtml);
+                }, false);
+			document.addEventListener("EasyNetShopModalOpened", function(event) {
+                        yaCounter36578185.reachGoal('show');
+                }, false);
+
+			</script>
+			
+		
+		<script>
+		
+			//eg()- метод который позволяет выбрать нужный элемент из массива по индексу.
+			jquery(document).ready(function(){
+				$('p').eq(0).text("$('p')-выборка по имени тега");
+				$('[name="input_background"]').css('background','yellow');
+				$('.bold_paragraph').css('fontWeight','bold');
+				$('#red_paragraph').css('color','red');
+			});
+			
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script type="text/javascript">
+             $(document).ready(function(){
+             $('body').append('<br/>Этот текст добавлен с помощью jQuery');
+             });
+		</script>
+	</head>
+	
+	<body>
+		<p></p>
+		<input tupe="text" name="input_background"/>
+		<p class="bold_paragraph"><u>getElementsByName()</u>-выборка по имени класса</p>
+		<p id="red_paragraph"><u>getElementsById()</u>-выборка по индефикатору</p>
+			<a href="http://jquery.com/">jQuery</a>
+			<script>
+				window.onload = function() {
+                 alert( "welcome" ); 
+				};
+				$( document ).ready(function() {
+					alert( "welcome" ); // Your code here.
+				});
+				$( document ).ready(function() {
+				$( "a" ).click(function( event ) {
+				alert( "Thanks for visiting!" );
+				};
+				});
+			</script>
+				<div id="reviev">
+				<div class="accordion">	
+					<img style="height:250px;width:250px;" src="../img/20.jpg">
+						
+						
+							<h3 title="clic">комнатные цветы</h3>
+							
+					
+							<p>sdfghjkxc vbnmdfghjk guh  yyyy yyyyyhhh hhhhhhh hhhhh hhhhh hhh hhhhhhhhh hhhhhhh</p>
+						
+					</div>
+
+			<script>
+					$(document).ready(function(){
+						$(".accordion h3:first").addClass("active");
+						$(".accordion p:not(:first)").hide();
+				 
+						$(".accordion h3").click(function(){
+				 
+							$(this).next("p").slideToggle("slow")
+							.siblings("p:visible").slideUp("slow");
+							$(this).toggleClass("active");
+							$(this).siblings("h3").removeClass("active");
+						});
+					});
+			</script>
+ 					</div>
+					
+					
+			<div class="run"> 
+			<div id="box"> 
+				<img style="height:250px;width:250px;" src="../img/24.jpg">
+				<script>
+					$(document).ready(function(){
+    $(".run").click(function(){
+ 
+        $("#box").animate({opacity: "0.1", left: "+=400"}, 1200)
+        .animate({opacity: "0.4", top: "+=160", height: "20", width: "20"}, "slow")
+        .animate({opacity: "1", left: "0", height: "100", width: "100"}, "slow")
+        .animate({top: "0"}, "fast")
+        .slideUp()
+        .slideDown("slow")
+        return false;
+    }); 
+});
+				</script>
+			</div>
+			</div>
+			
+			<div class="new_ask"> 
+			
+					
+				<h2>sdfghjujn</h2>
+				<p><img  id="largeImg" src="../img/18.jpg"></p>
+				<p class="thumbs">
+				    <a href="../img/2.jpg" title="Image 2"><img src="../img/2.jpg" /></a>
+					<a href="../img/3.jpg" title="Image 3"><img src="../img/19.jpg" /></a>
+					<a href="../img/4.jpg" title="Image 4"><img src="../img/16.jpg" /></a>
+					<a href="../img/5.jpg" title="Image 5"><img src="../img/16.jpg"/></a>
+					<a href="../img/6.jpg" title="Image 6"><img src="../img/16.jpg" /></a>
+				</p>
+			
+				<script>
+				$(document).ready(function(){
+ 
+					$("h2").append('<em></em>')
+ 
+					$(".thumbs a").click(function(){
+ 
+					var largePath = $(this).attr("href");
+					var largeAlt = $(this).attr("title");
+ 
+					$("#largeImg").attr({ src: largePath, alt: largeAlt });
+ 
+					$("h2 em").html(" (" + largeAlt + ")"); return false;
+					});
+  
+				});
+				</script>
+			</div>
+			
+			</div>
+	</body>		
+</html>

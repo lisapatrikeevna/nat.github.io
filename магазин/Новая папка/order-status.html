@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>корзина с помощью jQuery...</title>
+        <meta charset="UTF-8">   
+		<link rel="stylesheet"  href="css/корзина.css">
+		<link rel="stylesheet"  href="css/bootstrap.css">
+		<link rel="stylesheet"  href="css/boot1.css">
+		<script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script>
+		<script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ecommerce.js"></script>
+		<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-54671594-2"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+	  gtag('config', 'UA-54671594-2');
+	</script>
+	<script>
+      document.addEventListener("EasyNetShopLoaded", function(event) {
+     $(".easynetshop-buy").click(function () {
+       var target = $(this);
+       var pos = target.offset();
+       var cart_pos = $('#enscart_wrapper').offset();
+	   var clone = target.clone()
+			  .css({ position: 'absolute', 'z-index': '2100', top: pos.top, left: pos.left })
+			  .appendTo("body")
+			  .animate({top: cart_pos.top, left: cart_pos.left, opacity: 0}, 900, function() { clone.remove(); });
+       });
+        }, false);
+          document.addEventListener("EasyNetShopModalOpened", function(event) {
+         if (($(".easynetshop-modal-addtocart").css('display') != 'none'))  hideEasynetshopModals();
+         }, false);   
+    </script>			
+
+	<script type="text/javascript">
+        	document.addEventListener("EasyNetShopLoaded", function(event) {
+                    $('.easynetshop-buy').click(function()
+                	{yaCounter36578185.reachGoal('add');
+			gtag('event', 'клик', {'event_category': 'EasyNetShop', 'event_action': 'add'});
+			});
+                    $('.easynetshop-doorder').click(function()
+                	{yaCounter36578185.reachGoal('order');
+			yaCounter36578185.userParams({pokupal:true});
+			var ClientID = yaCounter36578185.getClientID();
+			});
+		    var fhtml = '';
+			fhtml += '<div style="color:#999999;margin-top:20px;text-align:center;">После оформления заказа Вы можете оплатить его онлайн <br> <img src="https://demo.easynetshop.ru/img/demopay.jpg">  </div>';
+
+		    $('.easynetshop-modal-addtocart .easynetshop-center').append(fhtml);
+                }, false);
+		document.addEventListener("EasyNetShopModalOpened", function(event) {
+                        yaCounter36578185.reachGoal('show');
+                }, false);
+
+        </script>
+       
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <span class="text-h2 demoselect">корзины с цветами</span> 
+                    <br> 
+                    <a href="main.html" class="">Вернуться на сайт </a>
+					<span class=""> | </span> 
+                    <a href="" class="">Зарегистрироваться и начать работу </a>
+                </div>
+	    </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-12  cm">
+                    <div class="prod">
+                        <div class="view text-center">
+                            <img src="../img/30.jpg" style="height: 206px;
+										width: 276px;" alt="prod1" class="img-responsive">
+                        </div>
+                        <div class="name easynetshop-item-name" rel="4a9f99dc1659">
+                            корзина цветов большая
+                        </div>
+                        <div class="desc">
+                            <ul>
+                                <li>Вес: 500 г.</li>
+                                <li>на выбор</li>
+                            </ul>
+                            <p class="intro easynetshop-item-desc" rel="4a9f99dc1659">
+                               корзина роз большая, 50шт.
+                            </p>
+                        </div>
+                        <div class="cost row">
+                            <div class="col-sm-6">
+                                <span class="price easynetshop-item-price" rel="4a9f99dc1659">500</span>
+                            <span class="red"> грн.</span>
+                            </div>
+                            <div class="col-sm-6 buy text-right">
+				<a class="easynetshop-buy" rel="4a9f99dc1659" >В корзину</a>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12  cm">
+                    <div class="prod">
+                        <div class="view">
+                           <img src="../img/8.jpg" style="height: 206px;
+										width: 276px;" alt="prod1" class="img-responsive">
+                        </div>
+                        <div class="name">
+                            корзина цветов средняя
+                        </div>
+                        <div class="desc">
+                            <ul>
+                                <li>Вес: 250 г.</li>
+                                <li>розы</li>
+                            </ul>
+                            <p class="intro">
+                                    корзина цветов средняя, 25шт.
+                             </p>
+                        </div>
+                        <div class="cost row">
+                            <div class="col-sm-6">
+                                <span class="price">420</span>
+                            <span class="red"> грн.</span>
+                            </div>
+                            <div class="col-sm-6 buy text-right">
+                                <a class="easynetshop-buy" rel="4a9f99dc1660" >В корзину</a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>  
+                <div class="col-md-3 col-sm-4 col-xs-12  cm">
+                    <div class="prod">
+                        <div class="view">
+                            <img src="../img/23.jpg" style="height: 206px;
+										width: 276px;" alt="prod1" class="img-responsive">
+                        </div>
+                        <div class="name">
+                            корзина цветов маленькая
+                        </div>
+                        <div class="desc">
+                            <ul>
+                                <li>Вес: 250 г.</li>
+                                <li>розы</li>
+                            </ul>
+                            <p class="intro">
+                                на выбор
+                            </p>
+                        </div>
+                        <div class="cost row">
+                            <div class="col-sm-6">
+                                <span class="price">320</span>
+                            <span class="red"> грн.</span>
+                            </div>
+                            <div class="col-sm-6 buy text-right">
+                                <a class="easynetshop-buy" rel="4a9f99dc1661" >В корзину</a>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12  cm">
+                    <div class="prod">
+                        <div class="view">
+                            <img src="../img/7.jpg" style="height: 206px;
+										width: 276px;" alt="prod1" class="img-responsive">
+                        </div>
+                        <div class="name">
+                            корзина цветов сюрприз
+                        </div>
+                        <div class="desc">
+                            <ul>
+                                <li>Вес: 400 г.</li>
+                                <li>плотоядные</li>
+                            </ul>
+                            <p class="intro">
+                                пальцы не совать, кусаются)))
+                            </p>
+                        </div>
+                        <div class="cost row">
+                            <div class="col-sm-6">
+                                <span class="price">560</span>
+                            <span class="red">  грн.</span>
+                            </div>
+                            <div class="col-sm-6 buy text-right">
+                                <a class="easynetshop-buy" rel="4a9f99dc1662" >В корзину</a>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+	</div>
+<div id="p" style="display:none; font-size:12px; background-color:rgba(0,0,0,0.6); color:#ffffff; padding:10px; width:300px; position: fixed; bottom:0px; right:0px;">ggg</div>
+
+<script>
+var ProductsRand, RegionRand, MailRand, Mail2Rand, CountItem;
+var Products = ['корзина цветов большая', 'корзина цветов средняя', 'корзина цветов маленькая', 'корзина цветов сюрприз'];
+var Region = ['Харьков', 'Киев'];
+var Mail = ['s','a','m','e','t','q','u','1','w'];
+var Mail2= ['@yandex.ru','@gmail.com'];
+
+function rotator(){
+	ProductsRand = Math.floor(Math.random() * Products.length);
+	RegionRand = Math.floor(Math.random() * Region.length);
+	MailRand = Math.floor(Math.random() * Mail.length);
+        Mail2Rand = Math.floor(Math.random() * Mail2.length);
+        CountItem = Math.floor(Math.random() * 3) + 1; 
+
+	$("#p").html('<div class="russia_flag"></div> '+ Region[RegionRand] + ' [' + Mail[MailRand]+'***'+Mail2[Mail2Rand]+']<br>'+ 'Только что купили '+Products[ProductsRand]+' (+еще '+CountItem+') ');	
+        $("#p").fadeIn(1000).delay(2000).fadeOut(1000);
+	}
+function getRandomInt(min, max)
+{
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+	
+
+var rtime = 1000;
+var receiver = [];
+//setTimeout(function recursiveFn() {
+//	rotator();
+//	rtime = getRandomInt(5000,20000);
+//    setTimeout(recursiveFn, rtime);
+//}, rtime);
+
+
+</script>
+
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter36578185 = new Ya.Metrika({
+                    id:36578185,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true,
+                    ecommerce:"dataLayer"
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/36578185" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter36578045 = new Ya.Metrika({
+                    id:36578045,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/36578045" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<script>   
+  document.addEventListener("EasyNetShopLoaded", function(event) {
+                    /* Что добавить */
+                    var selhtml = 'Нажимая на кнопку ЗАКАЗАТЬ Вы даете согласие на обработку указанных персональных данных в соответствии с законом РФ (152-ФЗ) и подтверждаете, что ознакомлены с <a href="#">политикой конфиденциальности компании</a>';
+                    /* Оформляем */
+                    var fhtml = '';
+                    fhtml += '<div style="padding:0px 20px;">';
+                    fhtml +=         selhtml;
+                    fhtml += '</div>';
+        
+                    /* Добавляем */
+                    $('.easynetshop-modal-cart .easynetshop-footer').before(fhtml);
+                       
+   
+                }, false);
+  </script>
+
+<div id="easynetshop-custom-orderfinalform">
+	Заказ №{%zakaz%} оформлен.
+			<br>Вы можете оплатить заказ:<br>
+			<iframe frameborder="0" allowtransparency="true" scrolling="no" 
+			src="https://money.yandex.ru/embed/shop.xml?
+			account=410014493920221
+			&quickpay=shop&payment-type-choice=on&mobile-payment-type-choice=on&writer=seller
+			&targets=Заказ номер {%zakaz%} / demo.easynetshop.ru
+			&default-sum={%itogo%}
+			&button-text=01
+			&successURL=" width="450" height="228"></iframe>
+</div>
+
+<script>   
+  document.addEventListener("EasyNetShopLoaded", function(event) {
+				var anc = window.location.hash.replace("#","");
+				if (anc != "") {
+				        ancarr = anc.split(':');
+					console.log(ancarr);
+					if (ancarr[0] == 'pay') {
+						var mypay_html=$('#easynetshop-custom-orderfinalform').html();
+						mypay_html=mypay_html.replace(/{%itogo%}/g,ancarr[1]);
+			        		mypay_html=mypay_html.replace(/{%zakaz%}/g,ancarr[2]);
+						$('.easynetshop-modal-ordercompleate .easynetshop-modal-body').append(mypay_html);
+						$('.easynetshop-modal-fade-wrapper').show();
+				                $('.easynetshop-modal-ordercompleate').show();
+			                        $('.easynetshop-modalcontainer').show();
+						}
+					}
+                }, false);
+</script>
+
+
+
+    </body>
+</html>

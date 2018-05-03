@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<title>корзина с помощью jQuery</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet"  href="css/корзина.css">
+		<link rel="stylesheet"  href="css/bootstrap.css">
+		<link rel="stylesheet"	href="css/boot1.css">
+		<script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script>
+		<script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ecommerce.js"></script>
+		<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-54671594-2"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-54671594-2');
+		</script>
+		<script>
+			document.addEventListener("EasyNetShopLoaded", function(event) {
+			$(".easynetshop-buy").click(function () {
+			var target = $(this);
+			var pos = target.offset();
+			var cart_pos = $('#enscart_wrapper').offset();
+			var clone = target.clone()
+			  .css({ position: 'absolute', 'z-index': '2100', top: pos.top, left: pos.left })
+			  .appendTo("body")
+			  .animate({top: cart_pos.top, left: cart_pos.left, opacity: 0}, 900, function() { clone.remove(); });
+				});
+			}, false);
+			document.addEventListener("EasyNetShopModalOpened", function(event) {
+			if (($(".easynetshop-modal-addtocart").css('display') != 'none'))  hideEasynetshopModals();
+			}, false);   
+			</script>
+			<script type="text/javascript">
+        	document.addEventListener("EasyNetShopLoaded", function(event) {
+                    $('.easynetshop-buy').click(function()
+                	{yaCounter36578185.reachGoal('add');
+			gtag('event', 'клик', {'event_category': 'EasyNetShop', 'event_action': 'add'});
+			});
+                    $('.easynetshop-doorder').click(function()
+                	{yaCounter36578185.reachGoal('order');
+			yaCounter36578185.userParams({pokupal:true});
+			var ClientID = yaCounter36578185.getClientID();
+			});
+		    var fhtml = '';
+			fhtml += '<div style="color:#999999;margin-top:20px;text-align:center;">После оформления заказа Вы можете оплатить его онлайн <br> <img src="https://demo.easynetshop.ru/img/demopay.jpg">  </div>';
+
+		    $('.easynetshop-modal-addtocart .easynetshop-center').append(fhtml);
+                }, false);
+			document.addEventListener("EasyNetShopModalOpened", function(event) {
+                        yaCounter36578185.reachGoal('show');
+                }, false);
+
+			</script>
+			
+		
+		<script defer="" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script defer="" src="//lk.easynetshop.ru/frontend/v3/ens-4a9f99dc.js"></script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<style>
+            body {
+                font-size: 14px;
+                min-width: 20pc;
+                font-family: 'PT Sans',sans-serif;
+                color: #2c1b0d;
+            }
+            .prod{
+                margin-top: 20px;
+                border: 1px dotted #cdcdcd;
+                
+            }
+            .name {
+                font-size: 1.8rem;
+                color: #2c1b0d;
+                padding: .5rem 0 0;
+                text-transform: uppercase;
+                height: 55px;
+                font-family: OpenSansBold,sans-serif;
+                text-align: center;
+            }
+            .name:after {
+                content: "";
+                width: 40%;
+                display: block;
+                margin: 0 auto;
+                border-bottom: 2px solid #e54b43;
+            }
+            .desc {
+                padding: 1rem;
+            }
+            .desc ul {
+                    padding: 0;
+                    display: block;
+                    list-style-type: disc;
+                 
+            }
+            .desc ul li {
+                font-size: 1.2rem;
+                display: block;
+            }
+            .intro {
+                height: 3pc;
+            }
+            .red {
+                color: #e54b43;
+            }
+            .price {
+                color: #e54b43;
+                font-size: 3rem;
+            }
+            .buy {
+                margin-top: 5px;
+            }
+            .cm {
+                padding-left: 0px;
+            }
+            .cost {
+                padding: 1rem;
+            }
+            .text-h2 {
+                font-size: 16px;
+            }
+            .demoselect {
+                color: #e54b43;
+		font-size: 20px;
+		font-weight: bold;
+            }
+	    .demo {
+                
+		font-size: 20px;
+		font-weight: bold;
+            }
+	
+	.easynetshop-gotocart, .easynetshop-goorder, .easynetshop-doorder {
+    		color: #fff;
+    		
+		background-color: #b4213b;
+    		border-color: #a42037;
+    		-webkit-box-sizing: border-box;
+    		-moz-box-sizing: border-box;
+    		box-sizing: border-box;
+		}
+	.easynetshop-gotocart:hover, .easynetshop-goorder:hover, .easynetshop-doorder:hover {
+    		color: #fff;
+    		
+		background-color: #cf435b;;
+    		border-color: #a42037;
+    		}
+
+	</style>
+	</head>
+	<body>
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-6">
+							<span class="text-h2 demoselect">корзины с цветами</span>
+							<br>
+							<a href="новая папка/main.html" class="">Вернуться на сайт </a>
+							<span class=""> | </span>
+							<a href="" class="">Зарегистрироваться и начать работу </a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 col-sm-4 col-xs-12  cm">
+						
+							<div class="prod">
+								<div class="view text-center">
+									<img src="../img/12.jpg" style="height: 206px;
+										width: 276px;"alt="цветы" class="img-responsive">
+								</div>
+								<div class="name easynetshop-item-name" rel="4a9f99dc1659">
+									корзина цветов большая
+								</div>
+								<div class="desc">
+									<ul>
+										<li>Вес: 500 г.</li>
+										<li>розы</li>
+									</ul>
+									<p class="intro easynetshop-item-desc" rel="4a9f99dc1659">
+										корзина роз большая, 50шт.
+									</p>
+								</div>
+								<div class="cost row">
+									<div class="col-sm-6">
+										<span class="price easynetshop-item-price" rel="4a9f99dc1659">320</span>
+									<span class="red"> грн.</span>
+									</div>
+									<div class="col-sm-6 buy text-right">
+										<a class="easynetshop-buy easynetshop-buy-allready" rel="4a9f99dc1659">В корзину</a>                            
+									</div>   
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-12  cm">
+							<div class="prod">
+								<div class="view">
+									<img src="../img/19.jpg" style="height: 206px;
+										width: 276px;" alt="prod1" class="img-responsive">
+								</div>
+								<div class="name">
+									корзина цветов средняя
+								</div>
+								<div class="desc">
+									<ul>
+										<li>Вес: 250 г.</li>
+										<li>розы.</li>
+									</ul>
+									<p class="intro">
+											корзина цветов средняя, 25шт.
+									</p>
+								</div>
+								<div class="cost row">
+									<div class="col-sm-6">
+										<span class="price">220</span>
+									<span class="red"> грн.</span>
+									</div>
+									<div class="col-sm-6 buy text-right">
+										<a class="easynetshop-buy easynetshop-buy-allready" rel="4a9f99dc1660">В корзину</a>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-4 col-xs-12  cm">
+							<div class="prod">
+								<div class="view">
+									<img src="../img/14.jpg" style="height: 206px;
+										width: 276px;" alt="prod1" class="img-responsive">
+								</div>
+								<div class="name">
+									корзина цветов маленькая
+								</div>
+								<div class="desc">
+									<ul>
+										<li>Вес: 250 г.</li>
+										<li>полевые цветы</li>
+									</ul>
+									<p class="intro">
+										на выбор
+									</p>
+								</div>
+								<div class="cost row">
+									<div class="col-sm-6">
+										<span class="price">320</span>
+									<span class="red"> грн.</span>
+									</div>
+									<div class="col-sm-6 buy text-right">
+										<a class="easynetshop-buy" rel="4a9f99dc1661">В корзину</a>
+										
+									</div>
+									
+								</div>
+							</div>
+						</div>	
+						<div class="col-md-3 col-sm-4 col-xs-12  cm">
+							<div class="prod">
+								<div class="view">
+									<img src="../img/11.jpg" style="height: 206px;
+										width: 276px;" alt="цветы" class="img-responsive">
+								</div>
+								<div class="name">
+									корзина цветов сюрприз
+								</div>
+								<div class="desc">
+									<ul>
+										<li>Вес: 300 г.</li>
+										<li>плотоядные</li>
+									</ul>
+									<p class="intro">
+										пальцы не совать, кусаются)))
+									</p>
+								</div>
+								<div class="cost row">
+									<div class="col-sm-6">
+										<span class="price">560</span>
+									<span class="red"> грн.</span>
+									</div>
+									<div class="col-sm-6 buy text-right">
+										<a class="easynetshop-buy easynetshop-buy-allready" rel="4a9f99dc1662">В корзину</a>
+										
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					<div id="p" style="display:none; font-size:12px; background-color:rgba(0,0,0,0.6); color:#ffffff; padding:10px; width:300px; position: fixed; bottom:0px; right:0px;">dddd</div>	
+					</div>
+				</div>
+				<script>
+					var ProductsRand, RegionRand, MailRand, Mail2Rand, CountItem;
+					var Products = ['корзина цветов большая', 'корзина цветов средняя', 'корзина цветов маленькая', 'корзина цветов асорти'];
+					var Region = ['Харьков', 'Киев'];
+					var Mail = ['s','a','m','e','t','q','u','1','w'];
+					var Mail2= ['@yandex.ru','@mail.ru','@gmail.com','@bk.ru','@inbox.ru'];
+
+					function rotator(){
+						ProductsRand = Math.floor(Math.random() * Products.length);
+						RegionRand = Math.floor(Math.random() * Region.length);
+						MailRand = Math.floor(Math.random() * Mail.length);
+							Mail2Rand = Math.floor(Math.random() * Mail2.length);
+							CountItem = Math.floor(Math.random() * 3) + 1; 
+
+						$("#p").html('<div class="russia_flag"></div> '+ Region[RegionRand] + ' [' + Mail[MailRand]+'***'+Mail2[Mail2Rand]+']<br>'+ 'Только что купили '+Products[ProductsRand]+' (+еще '+CountItem+') ');	
+							$("#p").fadeIn(1000).delay(2000).fadeOut(1000);
+						}
+					function getRandomInt(min, max)
+					{
+					  return Math.floor(Math.random() * (max - min + 1)) + min;
+					}
+
+						
+
+					var rtime = 1000;
+					var receiver = [];
+					//setTimeout(function recursiveFn() {
+					//	rotator();
+					//	rtime = getRandomInt(5000,20000);
+					//    setTimeout(recursiveFn, rtime);
+					//}, rtime);
+
+
+				</script>
+
+<style>
+.russia_flag {
+    display:inline-block;
+    width:16px;
+    height:11px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAIAAAD5gJpuAAAA8ElEQVQoU22PP06CURDEfw++CjsaQyxobCy4hgk3oeUensIrUHAXCwsKQ0dMJCZv5u1aPCKITDa7s38nW47H5IyI6KGzuIKDAZhMADITCpDZswLjzFFeYL//GgAgMy9J3kIpJSLKcpmrVR4ORNBatkZEtpb2H2/ndFrW689hu43Foux22Gkhp5RS1nrt53OAAbCR8neht/tcVaqeKnaBGIAuWpUW59F/ClJCDBvGT3r5rh9hZ3XIURVySCdS3aRwu/PDhtfhGcZ+C73fPt6JhVtpj/cwBIxkZrOUcMNCKlL/DBub1roFlCPEhfE3vWoBPz+JZR57HzlrAAAAAElFTkSuQmCC);
+}
+</style>
+
+					<script type="text/javascript">
+						(function (d, w, c) {
+							(w[c] = w[c] || []).push(function() {
+								try {
+									w.yaCounter36578185 = new Ya.Metrika({
+										id:36578185,
+										clickmap:true,
+										trackLinks:true,
+										accurateTrackBounce:true,
+										webvisor:true,
+										ecommerce:"dataLayer"
+									});
+								} catch(e) { }
+							});
+
+							var n = d.getElementsByTagName("script")[0],
+								s = d.createElement("script"),
+								f = function () { n.parentNode.insertBefore(s, n); };
+							s.type = "text/javascript";
+							s.async = true;
+							s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+							if (w.opera == "[object Opera]") {
+								d.addEventListener("DOMContentLoaded", f, false);
+							} else { f(); }
+						})(document, window, "yandex_metrika_callbacks");
+					</script>
+
+					<noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/36578185" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+
+						<script type="text/javascript">
+							(function (d, w, c) {
+								(w[c] = w[c] || []).push(function() {
+									try {
+										w.yaCounter36578045 = new Ya.Metrika({
+											id:36578045,
+											clickmap:true,
+											trackLinks:true,
+											accurateTrackBounce:true,
+											webvisor:true
+										});
+									} catch(e) { }
+								});
+
+								var n = d.getElementsByTagName("script")[0],
+									s = d.createElement("script"),
+									f = function () { n.parentNode.insertBefore(s, n); };
+								s.type = "text/javascript";
+								s.async = true;
+								s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+								if (w.opera == "[object Opera]") {
+									d.addEventListener("DOMContentLoaded", f, false);
+								} else { f(); }
+							})(document, window, "yandex_metrika_callbacks");
+						</script>
+						<noscript>&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/36578045" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+						<script>   
+						  document.addEventListener("EasyNetShopLoaded", function(event) {
+											/* Что добавить */
+											var selhtml = 'Нажимая на кнопку ЗАКАЗАТЬ Вы даете согласие на обработку указанных персональных данных в соответствии с законом РФ (152-ФЗ) и подтверждаете, что ознакомлены с <a href="#">политикой конфиденциальности компании</a>';
+											/* Оформляем */
+											var fhtml = '';
+											fhtml += '<div style="padding:0px 20px;">';
+											fhtml +=         selhtml;
+											fhtml += '</div>';
+								
+											/* Добавляем */
+											$('.easynetshop-modal-cart .easynetshop-footer').before(fhtml);
+											   
+						   
+										}, false);
+						  </script>
+						  <div id="easynetshop-custom-orderfinalform">
+							Заказ №{%zakaz%} оформлен.
+									<br>Вы можете оплатить заказ:<br>
+									<iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/shop.xml?&#10;&#9;&#9;&#9;account=410014493920221&#10;&#9;&#9;&#9;&amp;quickpay=shop&amp;payment-type-choice=on&amp;mobile-payment-type-choice=on&amp;writer=seller&#10;&#9;&#9;&#9;&amp;targets=Заказ номер {%zakaz%} / demo.easynetshop.ru&#10;&#9;&#9;&#9;&amp;default-sum={%itogo%}&#10;&#9;&#9;&#9;&amp;button-text=01&#10;&#9;&#9;&#9;&amp;successURL=" width="450" height="228"></iframe>
+						</div>
+						<script>   
+						  document.addEventListener("EasyNetShopLoaded", function(event) {
+										var anc = window.location.hash.replace("#","");
+										if (anc != "") {
+												ancarr = anc.split(':');
+											console.log(ancarr);
+											if (ancarr[0] == 'pay') {
+												var mypay_html=$('#easynetshop-custom-orderfinalform').html();
+												mypay_html=mypay_html.replace(/{%itogo%}/g,ancarr[1]);
+													mypay_html=mypay_html.replace(/{%zakaz%}/g,ancarr[2]);
+												$('.easynetshop-modal-ordercompleate .easynetshop-modal-body').append(mypay_html);
+												$('.easynetshop-modal-fade-wrapper').show();
+														$('.easynetshop-modal-ordercompleate').show();
+															$('.easynetshop-modalcontainer').show();
+												}
+											}
+										}, false);
+						</script>
+						<div class="easynetshop-modalcontainer" style="display: none;">
+						<div class="easynetshop-modal easynetshop-modal-addtocart" style="display: none;">
+						<div class="easynetshop-modal-header"><button type="button" class="easynetshop-close">×</button><h4 class="easynetshop-modal-title">Вы добавили заказ!</h4></div>
+						<div class="easynetshop-modal-body easynetshop-center"><button type="button" class="easynetshop-continue">Вернуться на сайт</button><button type="button" class="easynetshop-gotocart">Оформить заказ</button><br>
+						<div style="color:#999999;margin-top:20px;text-align:center;">После оформления заказа Вы можете оплатить его онлайн <br> <img src="https://demo.easynetshop.ru/img/demopay.jpg">  </div></div></div>
+						<div class="easynetshop-modal easynetshop-modal-cart" style="display: none;">
+						<div class="easynetshop-modal-header"><button type="button" class="easynetshop-close">×</button><h4 class="easynetshop-modal-title">Ваш заказ</h4></div>
+						<div class="easynetshop-modal-body"></div>
+						<div style="padding:0px 20px;">Нажимая на кнопку ЗАКАЗАТЬ Вы даете согласие на обработку указанных персональных данных в соответствии с законом РФ (152-ФЗ) и подтверждаете, что ознакомлены с <a href="#">политикой конфиденциальности компании</a></div>
+						<div class="easynetshop-footer"><button type="button" class="easynetshop-continue">Вернуться на сайт</button> <button type="button" class="easynetshop-doorder">Заказать</button><br><span class="powered">Работает на <a href="https://easynetshop.ru/?utm_source=partners&amp;utm_medium=referral" target="_blank">EasyNetShop.ru</a></span></div></div><div class="easynetshop-modal easynetshop-modal-ordercompleate" style="display: none;">
+						<div class="easynetshop-modal-header"><button type="button" class="easynetshop-close">×</button><h4 class="easynetshop-modal-title">Оформление заказа</h4></div><div class="easynetshop-modal-body"><br></div><div class="easynetshop-center  easynetshop-ok"><button type="button" class="easynetshop-continue">Вернуться на сайт</button><button type="button" class="easynetshop-returntocart">Вернуться к заказу</button><br><br></div></div><div class="easynetshop-modal easynetshop-modal-cartempty" style="display: none;"><div class="easynetshop-modal-header"><button type="button" class="easynetshop-close">×</button><h4 class="easynetshop-modal-title">Ваш заказ</h4></div><div class="easynetshop-modal-body">Пока ничего не выбрано!<br><br><div class="easynetshop-center"><button type="button" class="easynetshop-continue">Вернуться на сайт</button><br><span class="powered">Работает на <a href="https://easynetshop.ru/?utm_source=partners&amp;utm_medium=referral" target="_blank">EasyNetShop.ru</a></span><br><br></div></div></div><div class="easynetshop-modal easynetshop-modal-leavepopup" style="display: none;"><div class="easynetshop-modal-header"><button type="button" class="easynetshop-close">×</button><h4 class="easynetshop-modal-title">Напоминание</h4></div><div class="easynetshop-modal-body">---</div><div class="easynetshop-center"><button type="button" class="easynetshop-continue">Вернуться на сайт</button> <button type="button" class="easynetshop-gotocart">Оформить заказ</button><br><span class="powered">Работает на <a href="https://easynetshop.ru/?utm_source=partners&amp;utm_medium=referral" target="_blank">EasyNetShop.ru</a></span><br><br></div></div><div class="easynetshop-modal easynetshop-modal-callback" style="display: none;"><div class="easynetshop-modal-header"><button type="button" class="easynetshop-close">×</button><h4 class="easynetshop-modal-title">Обратная связь</h4></div><div class="easynetshop-modal-body"><div class="easynetshop-form-group"><input class="easynetshop-call-customfield" name="Название формы" value="Заказ звонка" type="hidden"><div class="easynetshop-6 easynetshop-cb">Ваш номер телефона</div><div class="easynetshop-6"><input class="easynetshop-call-customfield easynetshop-required" name="callback" value=""></div></div></div><div class="easynetshop-footer"><button type="button" class="easynetshop-continue">Вернуться на сайт</button> <button type="button" class="easynetshop-call">Заказать звонок</button><br><span class="powered">Работает на <a href="https://easynetshop.ru/?utm_source=partners&amp;utm_medium=referral" target="_blank">EasyNetShop.ru</a></span><br><br></div></div></div>
+						<div class="easynetshop-loader"><svg version="1.1" id="L7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"> <path fill="#666" d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3  c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z" transform="rotate(-245.997 50 50)">      <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="2s" from="0 50 50" to="-360 50 50" repeatCount="indefinite"></animateTransform>  </path> <path fill="#666" d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7  c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z" transform="rotate(-131.994 50 50)">      <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="1s" from="0 50 50" to="-360 50 50" repeatCount="indefinite"></animateTransform>  </path> <path fill="#666" d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5  L82,35.7z" transform="rotate(245.997 50 50)">      <animateTransform attributeName="transform" attributeType="XML" type="rotate" dur="2s" from="0 50 50" to="360 50 50" repeatCount="indefinite"></animateTransform>  </path></svg></div>
+						<div class="easynetshop-modal-fade-wrapper" style="display: none;"></div>
+						<div id="easynetshop-cart-default"><div id="enscart_wrapper"><div id="enscart_image_wrapper">	<svg id="enscart_image" width="40" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">	 <g display="inline">	  <line stroke="#ffffff" stroke-linecap="round" id="svg_1" y2="4.48005" x2="8.56256" y1="4.48005" x1="1.90565" stroke-width="2" fill="none"></line>	  <line stroke="#ffffff" stroke-linecap="round" id="svg_2" y2="26.81217" x2="14.00349" y1="5.01899" x1="8.62595" stroke-width="2" fill="none"></line>	  <line stroke="#ffffff" id="svg_4" y2="26.30272" x2="32.88148" y1="26.16121" x1="14.1167" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="none"></line>	  <line stroke="#ffffff" id="svg_5" y2="26.30272" x2="32.99469" y1="10.73616" x1="37.94769" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="none"></line>	  <line stroke="#ffffff" id="svg_6" y2="10.31162" x2="9.92788" y1="10.31162" x1="38.03889" stroke-linecap="round" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="none"></line>	  <line stroke="#ffffff" id="svg_7" y2="15.49104" x2="35.79708" y1="15.49104" x1="11.03169" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"></line>	  <line stroke="#ffffff" id="svg_8" y2="21.05161" x2="34.24375" y1="21.05161" x1="12.3638" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"></line>	  <line stroke="#ffffff" id="svg_9" y2="31.48214" x2="29.40023" y1="31.48214" x1="11.59775" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="none"></line>	  <ellipse stroke="#ffffff" ry="2.33498" rx="2.33498" id="svg_10" cy="33.81084" cx="11.94839" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="none"></ellipse>	  <ellipse stroke="#ffffff" id="svg_11" ry="2.33498" rx="2.33498" cy="33.75423" cx="30.28391" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="none"></ellipse>	  <line stroke="#ffffff" id="svg_12" y2="31.57648" x2="11.80216" y1="26.30901" x1="14.33369" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="2" fill="none"></line>	  <line transform="rotate(17.595947265625 30.324157714843736,17.913986206054684) " stroke="#ffffff" id="svg_15" y2="25.98805" x2="30.32416" y1="9.83992" x1="30.32416" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"></line>	  <line stroke="#ffffff" fill="none" stroke-width="2" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" opacity="0.5" x1="9.77064" y1="1.5" x2="9.77064" y2="1.5" id="svg_3"></line>	  <line stroke="#ffffff" fill="none" stroke-width="2" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" opacity="0.5" x1="11.41221" y1="7.5002" x2="11.41221" y2="7.5002" id="svg_13"></line>	  <line stroke="#ffffff" fill="none" stroke-width="2" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" opacity="0.5" x1="17.97846" y1="8.85874" x2="17.97846" y2="8.85874" id="svg_14"></line>	  <line stroke="#ffffff" fill="none" stroke-width="2" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" opacity="0.5" x1="33.09218" y1="8.80213" x2="33.09218" y2="8.80213" id="svg_19"></line>	  <line stroke="#ffffff" fill="none" stroke-width="2" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" opacity="0.5" x1="16.84635" y1="10.61351" x2="16.84635" y2="10.61351" id="svg_20"></line>	  <line id="svg_17" transform="rotate(17.595947265625 24.99999809265135,18.25) " stroke="#ffffff" y2="26.32406" x2="25" y1="10.17594" x1="25" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"></line>	  <line id="svg_18" transform="rotate(17.595947265625 19.499998092651342,17.950000762939453) " stroke="#ffffff" y2="26.02406" x2="19.5" y1="9.87594" x1="19.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"></line>	  <line stroke="#ffffff" id="svg_21" transform="rotate(17.595947265625 14.89651870727539,15.453754425048826) " y2="21.22377" x2="14.89652" y1="9.68374" x1="14.89652" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" fill="none"></line>	 </g>	</svg> 	</div><div id="enscart_counter" style="display: block;">3</div></div></div>	
+	</body>					
+	</html >
