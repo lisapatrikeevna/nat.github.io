@@ -1,0 +1,400 @@
+﻿body{
+	margin: 0;
+	padding: 0;
+	font-family:GABRIOLA,sans-serif;
+	color:#000;
+}
+body {
+	line-height: 15px;
+	display:block;
+	background: #FFF0F5;
+}
+
+
+header{
+	margin:0;
+	overflow: hidden;
+}
+header{
+	background: #FAEBD7 url(../img/5.jpg) no-repeat center top / cover ;
+	height: 100vh;
+}
+
+.container {
+	width: 930px;
+	height:100%;
+}
+
+h1{
+	margin-top:120px;
+	margin-left:130px;
+	font-size:110px;
+	font-style:italic;
+	color:#8B008B;
+	line-height:80px;
+}
+
+h2{
+	 margin-top:280px;
+	 margin-left:470px;
+	 font-size:100px;
+	 text-align:center;
+	 line-height:55px;
+	 font-style:italic;
+	 color:#8B008B;
+ }
+ 
+
+ 
+ div{
+	box-sizing:border-box;
+}
+ #fixed{
+	width:100%;
+	height:80px;
+	background:#0B0D0CF7;
+	position:fixed;
+	top:0;
+}
+
+  /*пишем в линию*/
+ #fixed  ul li{/*!!!!!!!!!!!!!*/
+	 float:right;
+	 margin-right:30px;
+	 margin-top:0;
+	 display:block;
+ }
+
+  #ay  li a{
+	 font-family:Cuprum, sans-serif;
+	 list-style-type:none;/*для ссылок на сети  ставим картинку  list-style-image: url(img/vk.jpg)*/
+	 list-style-position:outside;/*inside*/
+	 border:0 solid #fff;
+ }
+ 
+  #ay li:hover{
+	 background:rgba(255,0,255,0.50);
+	 
+ }
+ #fixed ul li a{
+	 color:#9932CC;
+	 padding:0 50px;/*отступ между словами*/
+	 line-height:30px;
+	 font-family:"segoe script";
+	 font-size:25px;
+	 text-decoration:none;
+	 display:block;
+	 height:44px;
+ }
+ /*конец*/ 
+  #fixed  ul li a:hover{
+	 background:rgba (183,43,43,0.52);
+	 text-decoration:underline;
+ }
+ #prise li{
+	/* margin-right:30px;*/
+ }
+ 
+ /*выпадающее меню*/
+ #fixed .dropdovn{
+	 position:absolute;/**/
+	 top:100%;
+	 width:155px;
+	 background:rgba(0, 0, 0, 0.62);
+	 color:#000;
+	 display:none;
+ }
+#fixed  li:hover .dropdovn{
+	 display:block; 
+	
+}
+#fixed  .dropdovn li{
+	 width: 160px;/*100%*/
+	  line-height:27px;
+}
+#fixed .dropdovn li a{
+     padding:3px 5px;
+     font-size:18px;	 
+	 text-align: left;	
+}
+#prise{
+	width:50px;
+	height:50px;
+	-webkit-transition:width 6s;
+	transition:6s;
+}	 
+   /*konec*/
+
+#fixed p{
+	font-size:25px;
+	color:#FF00FF;
+	display: block;
+    width: 180px;
+	margin:10%;
+}
+   
+   
+#sidebar ul li a{
+	color: #FF00FF;
+	text-align:left;
+	font-family:"Verbana",sans-sarif;
+	font-size:24px;
+	line-height:100px;
+	padding-left:15px;
+	height:63px;
+	
+}
+#sidebar ul li a:hover{
+	color:#8B008B;
+}
+#sidebar{
+	float:left;
+	display:block;
+	height:100%;
+	width:180px;
+	text-decoration:none;
+	
+}
+ 
+
+/**/
+/**/
+
+
+#content:before,/* для бронирования свободного места*/
+#content:after {
+	content: "";
+	display: table;
+}
+#content:after {
+	clear: both;
+}
+#content{
+	zoom: 1;
+}
+/*это для бронирования свободного места*/
+
+#art{
+	   width: 940px;
+	   padding-right: 355px;
+	   float:right;
+}
+#new{
+	display:block;
+	height:400px;
+}
+#art p{
+	color:  #FFFFFF;
+	font-family: "Verbana",sans-sarif;
+	text-align:center;
+}
+
+#q{
+	margin-right:60px;
+}
+.pseudo-class{
+	color:red;
+}
+ .pseudo-class:hover{
+	 color:green;
+ }
+ #content:hover{
+	 background:#C0C0C0;
+ }
+ .pseudo-class:visited{/*показывает что мы переходили по ссылке*/
+	 color: #4682B4;
+ }
+ .pseudo-class:focus{
+	 color:yellow;/*показывает что мы нажимаем на ссылку*/
+ }
+ #art p:first-child{/*меняем свойства 1 параграфа*/
+	 color:#4682B4;
+	 font-size:20px;
+ }
+ #art p:nth-child (2){
+	 font-size:12px;
+ }
+ #art p:last-child{/*меняем свойства последнего параграфа*/
+	  color:#00008B;
+ }
+ .pseudo-element::before,/*вставляет контент перед элементом*/
+ .pseudo-element::after{/*вставляет контент после элемента*/
+	 content: "";
+	 display: block;
+	 width: 100%;
+	 height: 65px;
+	 background:#FF1493;
+	 margin-bottom: 30px;
+	 margin-top: 30px;
+ }
+ .first-letter::first-letter {/*изменение 1 буквы*//**/
+	 color:  #BA55D3;
+	 font-size: 72px;
+	 display: block;
+	 float: left;
+	 margin-right: 10px;
+	 margin-bottom: 5px;
+ }
+ .first-letter{
+	 line-height:30px;
+	 font-size:30px;
+ }
+ .first-line::first-line{/*изменение линии*/
+	 font-size:24px;
+	 color: #DC143C;
+ }
+ ::selection{/*при выделении меняет цвет*/
+	 background: #FFF0F5;
+	 color:#DC143C;
+ }
+ #art p {/*работает со всеми параграфами данного селектора*/
+	background: #FF69B4;
+ }
+ #art > p {/*пропускает другие селекторы в нутри себя*/
+	background: black;
+	padding-left:10px;
+	padding-right:10px;
+ }
+ #art .combinator + p {
+	background: #FF00FF;
+ }
+ #art .combinator ~ p {/*работает с параграфами после  данного селектора*/
+	font-size: 18px; 
+ }
+ 
+ 
+ .bottom{
+	 float:right;
+	 display:block;
+	 background:#EE82EE;
+	 margin-right:23%;
+	 margin-top:15px;
+ }
+ .bottom p:first-child{
+	font-size: 45px;
+	color:#fff;
+ }
+ .bottom p:nth-child(2){
+	 font-size:29px;
+	 line-height:45px;
+	 padding-left:300px;
+ }
+ .bottom p:last-child{
+	float:right;
+	 margin-right:310px;
+	 margin-bottom:40px;
+ }
+ 
+
+ 
+#ups p{
+	position:relative;
+} 
+ .ups p{
+	 font-size:70px;
+     line-height:70px;
+	 padding-left:580px;
+ }
+ 
+ 
+ #slider{/*положение слайдера*/
+	position: relative;
+	text-align: center;
+	top:10px;
+}
+#slider{/*центровка слайдера*/
+	margin: 0 auto;
+}
+#slider article{/*все изображения справа дуг от друга*/
+	width: 20%;
+	float: left;
+}
+#slider .image{/*устанавливает общий размер блока с изображением*/
+	width: 60%;
+	line-height: 0;
+}
+#overflow{/*скрывае все, что за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+#image  article img{/*размер изображения слайдера*/
+	width: 100%;
+}
+#desktop:checked ~ #slider{/*размер всего слайдера*//**/
+	max-width: 960px;/*максимальная длинна*/
+}
+/*настройка переключения и положения для левой стрелки*/
+/*если свич 1-5 активны, то идет обращение к лейблу из блока с id контролс*/
+#switch1:checked ~ #controls label:nth-child(1),
+#switch1:checked ~ #controls label:nth-child(2),
+#switch1:checked ~ #controls label:nth-child(3){
+	background: url('../img/10.png') no-repeat;/*заливка фона картинкой без повтора*/
+	float: left;
+	margin: 0 0 0 -84px;/*сдвиг в лево*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+/*настройка переключения для правой стрелки*/
+#switch1:checked ~ #controls label:nth-child(2),
+#switch1:checked ~ #controls label:nth-child(3),
+#switch1:checked ~ #controls label:nth-child(1){
+	background:url('../img/20.png') no-repeat;/*заливка фона картинкой без повтора*/
+	float: right;
+	margin: 0 -84px 0 0 ;/*сдвиг в право*/
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+label,a{/*при наведении стрелки или переключателя -курсор изменится*/
+	cursor: pointer;
+}
+.all input{/*скрывает стандартные импуты(чекбоксы)на странице*/
+	display: none;
+}
+/*позиция изображения при активации переключателя*/
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+#switch2:checked ~ #slides .image{
+	margin-left: 100%;
+}#switch3:checked ~ #slides .image{
+	margin-left: 200%;
+}
+
+#controls{/*положение блока всех управляющих элементов*/
+	margin: -25% 0 0 0;
+	width: 100%;
+	height: 50px;
+}
+#active label{/*стиль отдельного переключателя*//**/
+	border-radius: 10px;/*скругление углов*/
+	display: inline-block;/*расположение в строку*/
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+}
+#active{/*расположение блока с переключателями*/
+	margin: 23% 0 0;
+	text-align: center;
+}
+#active label:hover{/*поведение чекбокса при наведении*/
+	background: #76c8ff;
+	border-color: #777 !important;/*выполнение в любом случае*/
+}
+/*цвет активного  лейбла при активации переключателя(чекбокса)*/
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3){
+	background:#18a3dd;
+	border-color:#18a3dd !important;
+}
+#sledes.image{/*анимация пролистывания изображений*/
+	transition:all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+#controls label:hover;{/*прозрачност стрелок при наведении курсора*/
+	opacity: 0.6;
+}
+#controls label{/*прозрачность стрелок при отводе курсора*/
+	transition: opacity 0.2s else-out;
+}
